@@ -38,19 +38,7 @@ public class DatabaseConnector implements AutoCloseable {
     @Override
     public void close() throws SQLException {
         if (connection != null) {
-
-            Statement stmt = null;
-            ResultSet rs = null;
-
-            if (rs != null) {
-                rs.close();
-            }
-            if (stmt != null) {
-                stmt.close();
-            }
-
             connection.close();
         }
-
     }
 }
